@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Heart Cancer Form</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static 'img/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static 'img/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Home</a></li>
+                <li class="menu-list-item"><a href="../kidneycancer.html">Kidney cancer</a></li>
+                <li class="menu-list-item"><a href="../breastcancer.html">Breast cancer</a></li>
+                <li class="menu-list-item"><a href="../heartcancer.html">Heart cancer</a></li>
+                <li class="menu-list-item"><a href="../lungcancer.html">Lung cancer</a></li>
+                <li class="menu-list-item"><a href="../bmi.html">BMI Calculator</a></li>
+                <li>
+                    <a href="../kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="../kidneyform.html">Kidney Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../breastform.html">Breast Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../heartform.html">Heart Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../lungform.html">Lung Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <form action = "heart">
+            <div class="prediction-form">
+                <h1 class="prediction-title">Heart Cancer Prediction Form</h1>
+                <div class="prediction-container">
+                    <div class="first-container">
+                        <div class="second-container">
+                            <div class="inner-form">
+                                <label for="user">Age</label>
+                                <input type = "text" class = input name = 'h1' id = 'age' placeholder="age">
+                                <h3>age in years</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Sex</label>
+                                <input type = "text" class = input name = 'h2' id = 'sex' placeholder="sex">
+                                <h3>(1 = male, 0 = female)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Chest pain type</label>
+                                <input type = "text" class = input name = 'h3' id = 'cp' placeholder="cp">
+                                <h3>cp (0 - 3)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Resting blood pressure</label>
+                                <input type = "text" class = input name = 'h7' id = 'trestbps' placeholder="trestbps">
+                                <h3>trestbps in mm Hg</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Serum cholestoral</label>
+                                <input type = "text" class = input name = 'h6' id = 'chol' placeholder="chol">
+                                <h3>chol in mg/dl</h3>
+                            </div>
+                        </div>
+                        <div class="third-container">
+                            <div class="inner-form">
+                                <label for="user">Fasting blood sugar</label>
+                                <input type = "text" class = input name = 'h4' id = 'fbs' placeholder="fbs">
+                                <h3>fbs > 120mg/dl (1 = true, 0 = false) </h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Resting electrocardiographic</label>
+                                <input type = "text" class = input name = 'h5' id = 'restecg' placeholder="restecg">
+                                <h3>result (0, 1, 2)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Maximum heart rate</label>
+                                <input type = "text" class = input name = 'h8' id = 'thalach' placeholder="thalach">
+                                <h3>Max achieved</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Slope of the peak exercise ST segment</label>
+                                <input type = "text" class = input name = 'h9' id = 'slope' placeholder="slope">
+                                <h3>slope (0, 1, 2)</h3>
+                            </div>
+                        </div>   
+                    </div>     
+                </div>
+                <div class="click-btn">
+                    <button type="submit" value="submit" class="click">PREDICT</button>
+                </div>
+            </div>
+        </form>
+        <div style="margin: 2rem 0 0rem 2rem;">
+            <h2> Result: {{heartresult}}</h2>
+        </div>
+    </main>    
+    
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+</body>
+</html>

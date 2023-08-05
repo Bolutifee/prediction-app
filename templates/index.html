@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" href= "{% static 'img/favicon-32x32.png' %}" >
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+
+        <div id="open" class="icon-container">
+            <img alt="open-menu" src="{% static 'img/icon-menu.svg' %}">
+        </div>
+        <nav id="navbar">
+            <div class="menu">
+                <div class="image-close-container">
+                    <img id="close" src="{% static 'img/icon-menu-close.svg' %}" alt="close">
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a href="">Home</a></li>
+                    <li class="menu-list-item"><a href="./kidneycancer.html">Kidney cancer</a></li>
+                    <li class="menu-list-item"><a href="./breastcancer.html">Breast cancer</a></li>
+                    <li class="menu-list-item"><a href="./heartcancer.html">Heart cancer</a></li>
+                    <li class="menu-list-item"><a href="./lungcancer.html">Lung cancer</a></li>
+                    <li class="menu-list-item"><a href="./bmi.html">BMI Calculator</a></li>
+                    <li>
+                        <a href="./kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                        <ul class="dropdown">
+                            <li class="inner-menu"><a href="./kidneyform.html">Kidney Prediction Form</a></li>
+                            <li class="inner-menu"><a href="./breastform.html">Breast Prediction Form</a></li>
+                            <li class="inner-menu"><a href="./heartform.html">Heart Prediction Form</a></li>
+                            <li class="inner-menu"><a href="./lungform.html">Lung Prediction Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="top-container">
+            <h1 class="top-title">
+                Unveiling Cancer: A Concise Introduction.
+            </h1>
+            <div class="top-content">
+                <p>
+                    Cancer is a disease characterized by uncontrolled cell growth that can invade nearby 
+                    tissues and spread to other parts of the body. It can be caused by genetic mutations, 
+                    carcinogen exposure, infections, and lifestyle factors. Early detection and treatment 
+                    options like surgery, radiation, and chemotherapy are crucial for managing cancer effectively.
+                </p>
+                <a href="https://www.cancer.org/cancer/understanding-cancer/history-of-cancer.html">READ MORE</a>
+            </div>
+        </div>
+    </header>
+
+        <div class="intro">
+            <div class="history">
+                <h1>Unveiling Diverse Cancer Realms</h1>
+            </div>
+            <div class="history-text">
+                <p>
+                    Explore the unique characteristics and challenges posed by kidney, heart, breast, and lung cancers. 
+                    Gain insights into the science, symptoms, and treatments associated with these prevalent forms of cancer. 
+                    From the intricate workings of kidney cancer to the resilient nature of heart cancer, the intricacies of breast cancer, and the complexities of lung cancer, this exploration will provide a focused understanding of each disease. Discover the latest advancements in research and treatment options, empowering yourself with knowledge about these critical areas of cancer care. Let's navigate this journey together and shed light on these specific cancers."
+                </p>
+            </div>
+        </div>
+
+    <!--Kidney container start -->
+    <main>
+        <div class="cell-summary">
+            <section class="cell" id="kidney-cell">
+                <h1 class="cell-title">Kidney Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'img/icons8-kidney-68 (1).png' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Kidney cancer, scientifically known as renal cell carcinoma, is a malignancy that 
+                            originates in the cells of the kidneys. Renal cell carcinoma accounts for the majority of 
+                            kidney cancer cases and is characterized by the uncontrolled growth of abnormal cells within 
+                            the kidney tissues. In-depth studies of kidney cancer have identified various subtypes, each 
+                            with distinct genetic and molecular characteristics. Common subtypes include clear cell, papillary, 
+                            chromophobe, and others. These subtypes provide valuable insights into tumor behavior, prognosis, 
+                            and treatment approaches. Advancements in molecular biology and genomics have revealed key genetic 
+                            mutations associated with kidney cancer, such as VHL, MET, and TP53. These mutations play a significant 
+                            role in the initiation and progression of the disease. Additionally, researchers are investigating the 
+                            intricate interactions between the tumor microenvironment and the immune system, which impact tumor growth 
+                            and metastasis. By delving into the scientific understanding of kidney cancer, researchers strive to improve 
+                            diagnosis, treatment options, and ultimately enhance the lives of individuals affected by this disease.
+                        </p>
+                    </div>
+                    <div class="kidney-link">
+                        <a href="./kidneycancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        <!-- Kidney container stop -->
+
+         <!-- Breast container start -->
+            <section class="cell" id="breast-cell">
+                <h1 class="cell-title">Breast Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'img/icons8-breast-64.png' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Breast cancer is a complex disease characterized by the uncontrolled growth of abnormal cells in the breast 
+                            tissue. It can occur in both women and men, though it is more common in women. Breast cancer can be classified 
+                            into different types, including ductal carcinoma, lobular carcinoma, and less common subtypes. The development 
+                            of breast cancer involves a combination of genetic, hormonal, and environmental factors. Genetic mutations, 
+                            such as BRCA1 and BRCA2, are associated with an increased risk of breast cancer. Hormonal factors, particularly 
+                            estrogen and progesterone, also play a significant role in breast cancer development. Advancements in research 
+                            have identified distinct molecular subtypes of breast cancer, each with unique characteristics and treatment responses. 
+                            Targeted therapies have been developed to specifically target the molecular pathways involved in the growth of cancer 
+                            cells. Examples include HER2-targeted therapies and hormone therapies, which have significantly improved outcomes for 
+                            specific subtypes of breast cancer. Ongoing research continues to deepen our understanding of breast cancer's biology 
+                            and pave the way for innovative treatment approaches.
+                        </p>
+                    </div>
+                    <div class="breast-link">
+                        <a href="./breastcancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Breast container stop -->
+
+         <!-- Heart container start -->
+        <div class="cell-summary">
+            <section class="cell" id="heart-cell">
+                <h1 class="cell-title">Heart Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'img/icons8-heartbeat-50.png' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Heart cancer, also known as primary cardiac tumor, is an extremely rare condition. Malignant tumors 
+                            originating in the heart are uncommon, with the majority of heart tumors being noncancerous. Due to 
+                            its rarity, heart cancer has limited scientific research and understanding. The treatment strategies 
+                            for heart cancer are not well-established due to its uncommon occurrence. In cases of primary cardiac 
+                            tumors, surgical removal of the tumor is typically performed. For malignant or metastatic tumors, a 
+                            combination of surgical intervention, chemotherapy, and radiation therapy may be considered. Given the 
+                            limited knowledge about heart cancer, it is crucial to consult with healthcare professionals who 
+                            specialize in cardiac conditions for accurate diagnosis and appropriate treatment options. 
+                            Collaborative discussions between the patient, oncologists, and cardiologists are essential to develop 
+                            an individualized treatment plan. As heart cancer remains an exceedingly rare condition, continued 
+                            research efforts are needed to improve our understanding and develop more targeted treatment approaches.
+                        </p>
+                    </div>
+                    <div class="heart-link">
+                        <a href="./heartcancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        <!-- Heart container stop -->
+
+        <!-- Lung container start -->
+            <section class="cell" id="lung-cell">
+                <h1 class="cell-title">Lung Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'img/icons8-lung-64.png' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Lung cancer is a complex disease that involves the uncontrolled growth of abnormal cells in the lungs. 
+                            It is primarily categorized into two main types: non-small cell lung cancer (NSCLC) and small cell 
+                            lung cancer (SCLC). NSCLC accounts for the majority of cases and includes subtypes such as adenocarcinoma, 
+                            squamous cell carcinoma, and large cell carcinoma. SCLC is less common but tends to grow and spread more 
+                            rapidly. The development of lung cancer is influenced by various genetic and molecular factors. Mutations 
+                            in specific genes, such as EGFR, ALK, KRAS, and ROS1, play a significant role in the initiation and progression 
+                            of lung cancer. Other factors, including environmental exposures like tobacco smoke, air pollution, and occupational 
+                            hazards, contribute to the risk. Advancements in research have led to targeted therapies and immunotherapies that 
+                            specifically target the altered molecules and pathways driving lung cancer growth. Precision medicine approaches 
+                            aim to match treatments with the genetic profiles of individual tumors, allowing for more effective and 
+                            personalized interventions. Ongoing studies continue to unravel the complexities of lung cancer, leading to 
+                            improved understanding and innovative approaches to treatment.
+
+                        </p>
+                    </div>
+                    <div class="lung-link">
+                        <a href="./lungcancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Lung container stop -->
+
+
+        <!-- Footer starts -->
+        <footer>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#">dataset source</a></li>
+                <li class="footer-list-item"><a href="#">reference</a></li>
+                <li class="footer-list-item"><a href="#">Copyright &copy;</a></li>
+            </ul>
+            <div class="footer-image">
+                <a href="https://github.com/Bolutifee"><img src="{% static 'img/github-icon.png' %}" alt=""></a>
+                <a href="https://www.linkedin.com/in/idowu-bolutife-14a827254"><img src="{% static 'img/linkedin-square-icon.png'%}" alt=""></a>
+                <a href="https://twitter.com/thegodlychild?t=OJ7hBy6EZRZqWyIvghOj5Q&s=08"><img src="{% static 'img/twitter-icon.png' %}" alt=""></a>
+            </div>
+        </footer>
+        <!-- Footer stops -->
+
+        
+    </main>
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+</body>
+</html>

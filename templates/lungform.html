@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Lung Cancer Form</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static 'img/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static 'img/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Home</a></li>
+                <li class="menu-list-item"><a href="../kidneycancer.html">Kidney cancer</a></li>
+                <li class="menu-list-item"><a href="../breastcancer.html">Breast cancer</a></li>
+                <li class="menu-list-item"><a href="../heartcancer.html">Heart cancer</a></li>
+                <li class="menu-list-item"><a href="../lungcancer.html">Lung cancer</a></li>
+                <li class="menu-list-item"><a href="../bmi.html">BMI Calculator</a></li>
+                <li>
+                    <a href="../kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="../kidneyform.html">Kidney Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../breastform.html">Breast Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../heartform.html">Heart Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../lungform.html">Lung Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <form action = "lung">
+            <div class="prediction-form">
+                <h1 class="prediction-title">Lung Cancer Prediction Form</h1>
+                <div class="prediction-container">
+                    <div class="first-container">
+                        <div class="second-container">
+                            <div class="inner-form">
+                                <label for="user">AGE</label>
+                                <input type = "text" class = input name = 'l1' id = 'AGE' placeholder="AGE">
+                                <h3>The age of the patient</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">YELLOW_FINGERS</label>
+                                <input type = "text" class = input name = 'l2' id = 'YELLOW_FINGERS' placeholder="YELLOW_FINGERS">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">ANXIETY</label>
+                                <input type = "text" class = input name = 'l3' id = 'ANXIETY' placeholder="ANXIETY">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">PEER_PRESSURE</label>
+                                <input type = "text" class = input name = l4 id = 'PEER_PRESSURE' placeholder="PEER_PRESSURE">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">CHRONIC DISEASE</label>
+                                <input type = "text" class = input name = l5 id = 'CHRONIC DISEASE' placeholder="CHRONIC DISEASE">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">FATIGUE</label>
+                                <input type = "text" class = input name = l6 id = 'FATIGUE' placeholder="FATIGUE">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                        </div>
+                        <div class="third-container">
+                            <div class="inner-form">
+                                <label for="user">ALLERGY</label>
+                                <input type = "text" class = input name = l7 id = 'ALLERGY' placeholder="ALLERGY">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">WHEEZING</label>
+                                <input type = "text" class = input name = l8 id = 'WHEEZING' placeholder="WHEEZING">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">ALCOHOL CONSUMING</label>
+                                <input type = "text" class = input name = l9 id = 'ALCOHOL CONSUMING' placeholder="ALCOHOL CONSUMING">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">COUGHING</label>
+                                <input type = "text" class = input name = l10 id = 'COUGHING' placeholder="COUGHING">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">SWALLOWING DIFFICULTY</label>
+                                <input type = "text" class = input name = l11 id = 'SWALLOWING DIFFICULTY' placeholder="SWALLOWING DIFFICULTY">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">CHEST PAIN</label>
+                                <input type = "text" class = input name = l12 id = 'CHEST PAIN' placeholder="CHEST PAIN">
+                                <h3>(YES = 2, NO = 1)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="click-btn">
+                    <button type="submit" value="submit" class="click">PREDICT</button>
+                </div>
+            </div>
+        </form>
+        <div style="margin: 2rem 0 0rem 2rem;">
+            <h2> Result : {{lungresult}}</h2>
+        </div>
+    </main>    
+    
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>

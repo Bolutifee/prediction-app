@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Breast Cancer Form</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static '/img/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static '/img/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Home</a></li>
+                <li class="menu-list-item"><a href="../kidneycancer.html">Kidney cancer</a></li>
+                <li class="menu-list-item"><a href="../breastcancer.html">Breast cancer</a></li>
+                <li class="menu-list-item"><a href="../heartcancer.html">Heart cancer</a></li>
+                <li class="menu-list-item"><a href="../lungcancer.html">Lung cancer</a></li>
+                <li class="menu-list-item"><a href="../bmi.html">BMI Calculator</a></li>
+                <li>
+                    <a href="../kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="../kidneyform.html">Kidney Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../breastform.html">Breast Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../heartform.html">Heart Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../lungform.html">Lung Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <form action = "main">
+            <div class="prediction-form">
+                <h1 class="prediction-title">Breast Cancer Prediction Form</h1>
+                 <div class="prediction-container">
+                    <div class="first-container">
+                        <div class="second-container">
+                            <div class="inner-form">
+                                <label for="user">radius_mean</label>
+                                <input type = "text" class = input name = 'b1' id = 'radius_mean' placeholder="radius_mean">
+                                <h3>Radius of Lobes</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">perimeter_mean</label>
+                                <input type = "text" class = input name = 'b2' id = 'perimeter_mean' placeholder="perimeter_mean">
+                                <h3>Outer Perimeter of Lobes</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">area_mean</label>
+                                <input type = "text" class = input name = 'b3' id = 'area_mean' placeholder="area_mean">
+                                <h3>Mean Area of Lobes</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">compactness_mean</label>
+                                <input type = "text" class = input name = 'b4' id = 'compactness_mean' placeholder="compactness_mean">
+                                <h3>Mean of compactness</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">concavity_mean</label>
+                                <input type = "text" class = input name = 'b5' id = 'concavity_mean' placeholder="concavity_mean">
+                                <h3>Mean of Concavity</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">concave points_mean</label>
+                                <input type = "text" class = input name = 'b6' id = 'concave points_mean' placeholder="concave points_mean">
+                                <h3>Mean of Concave Points</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">radius_se</label>
+                                <input type = "text" class = input name = 'b7' id = 'radius_se' placeholder="radius_se">
+                                <h3>SE of Radius</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">perimeter_se</label>
+                                <input type = "text" class = input name = 'b9' id = 'perimeter_se' placeholder="perimeter_se">
+                                <h3>Perimeter of SE</h3>
+                            </div>
+                        </div>
+                        <div class="third-container">
+                            <div class="inner-form">
+                                <label for="user">area_se</label>
+                                <input type = "text" class = input name = 'b8' id = 'area_se' placeholder="area_se">
+                                <h3>Area of SE</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">radius_worst</label>
+                                <input type = "text" class = input name = 'b10' id = 'radius_worst' placeholder="radius_worst">
+                                <h3>Worst Radius</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">perimeter_worst</label>
+                                <input type = "text" class = input name = 'b12' id = 'perimeter_worst' placeholder="perimeter_worst">
+                                <h3>Worst Perimeter</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">area_worst</label>
+                                <input type = "text" class = input name = 'b11' id = 'area_worst' placeholder="area_worst">
+                                <h3>Worst Area</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">compactness_worst</label>
+                                <input type = "text" class = input name = 'b13' id = 'compactness_worst' placeholder="compactness_worst">
+                                <h3>Worst Compactness</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">concavity_worst</label>
+                                <input type = "text" class = input name = 'b14' id = 'concavity_worst' placeholder="concavity_worst">
+                                <h3>Worst Concavity</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">concave points_worst</label>
+                                <input type = "text" class = input name = 'b15' id = 'concave points_worst' placeholder="concave points_worst">
+                                <h3>Worst Concave Points</h3>
+                            </div>
+                        </div> 
+                    </div>   
+                 </div>
+                    <div class="click-btn">
+                        <button type="submit" value="Submit" class="click">PREDICT</button>
+                </div>
+            </div>
+        </form>
+        <div style="margin: 2rem 0 0rem 2rem;">
+            <h2> Result : {{breastresult}}</h2>
+        </div>
+    </main>    
+    
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Kidney Cancer Form</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static 'img/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static 'img/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Home</a></li>
+                <li class="menu-list-item"><a href="../kidneycancer.html">Kidney cancer</a></li>
+                <li class="menu-list-item"><a href="../breastcancer.html">Breast cancer</a></li>
+                <li class="menu-list-item"><a href="../heartcancer.html">Heart cancer</a></li>
+                <li class="menu-list-item"><a href="../lungcancer.html">Lung cancer</a></li>
+                <li class="menu-list-item"><a href="../bmi.html">BMI Calculator</a></li>
+                <li>
+                    <a href="../kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="../kidneyform.html">Kidney Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../breastform.html">Breast Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../heartform.html">Heart Prediction Form</a></li>
+                        <li class="inner-menu"><a href="../lungform.html">Lung Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <form action = "kidney">
+            <div class="prediction-form">
+                <h1 class="prediction-title">Kidney Cancer Prediction Form</h1>
+                <div class="prediction-container">   
+                    <div class="first-container">        
+                        <div class="second-container">
+                            <div class="inner-form">
+                                <label for="user">Specific Gravity</label>
+                                <input type = "text" class = input name = 'k1' id = 'sg' placeholder="sg">
+                                <h3>sg - (1.005, 1.010, 1.015, 1.020, 1.025)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Albumin</label>
+                                <input type = "text" class = input name = 'k2' id = 'al' placeholder="al">
+                                <h3>nominal - (0, 1, 2, 3, 4, 5)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Sugar</label>
+                                <input type = "text" class = input name = 'k3' id = 'su' placeholder="su">
+                                <h3>nominal - (0, 1, 2, 3, 4, 5)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Pus Cell</label>
+                                <input type = "text" class = input name = 'k4' id = 'pc' placeholder="pc">
+                                <h3>pc(normal = 1, abnormal = 0)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Blood Glucose Random</label>
+                                <input type = "text" class = input name = 'k5' id = 'bgr' placeholder="bgr">
+                                <h3>bgr in mgs/dl </h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Blood Urea</label>
+                                <input type = "text" class = input name = 'k6' id = 'bu' placeholder="bu">
+                                <h3>bu in mgs/dl</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Serum Creatinine</label>
+                                <input type = "text" class = input name = 'k7' id = 'sc' placeholder="sc">
+                                <h3>sc in mgs/dl</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Sodium</label>
+                                <input type = "text" class = input name = 'k8' id = 'sod' placeholder="sod">
+                                <h3>sod in mEq/L</h3>
+                            </div>
+                        </div>
+                        <div class="third-container">
+                            <div class="inner-form">
+                                <label for="user">Hemoglobin</label>
+                                <input type = "text" class = input name = 'k9' id = 'hemo' placeholder="hemo">
+                                <h3>hemo in gms</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Packed Cell Volume</label>
+                                <input type = "text" class = input name = 'k10' id = 'pcv' placeholder="pcv">
+                                <h3>numerical</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Red Blood Cell Count</label>
+                                <input type = "text" class = input name = 'k11' id = 'rc' placeholder="rc">
+                                <h3>rc in millions/cmm</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Hypertension</label>
+                                <input type = "text" class = input name = 'k12' id = 'htn' placeholder="htn">
+                                <h3>htn (yes = 1, no = 0)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Diabetes Mellitus</label>
+                                <input type = "text" class = input name = 'k13' id = 'dm' placeholder="dm">
+                                <h3>dm (yes = 1, no = 0)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Appetite</label>
+                                <input type = "text" class = input name = 'k14' id = 'appet' placeholder="appet">
+                                <h3>appet(good = 0, poor = 1)</h3>
+                            </div>
+                            <div class="inner-form">
+                                <label for="user">Pedal Edema</label>
+                                <input type = "text" class = input name = 'k15' id = 'pe' placeholder="pe">
+                                <h3>pe (yes = 1, no = 0)</h3>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="click-btn">
+                    <button type="submit" value="submit" class="click">PREDICT</button>
+                </div>
+            </div>
+        </form>
+        <div style="margin: 2rem 0 0rem 2rem;">
+            <h2> Result : {{kidneyresult}}</h2>
+        </div>
+    </main>    
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>

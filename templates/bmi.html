@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static 'img/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static 'img/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="./index.html">Home</a></li>
+                <li class="menu-list-item"><a href="./kidneycancer.html">Kidney cancer</a></li>
+                <li class="menu-list-item"><a href="./breastcancer.html">Breast cancer</a></li>
+                <li class="menu-list-item"><a href="./heartcancer.html">Heart cancer</a></li>
+                <li class="menu-list-item"><a href="./lungcancer.html">Lung cancer</a></li>
+                <li class="menu-list-item"><a href="./bmi.html">BMI Calculator</a></li>
+                <li>
+                    <a href="./kidneyform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="./kidneyform.html">Kidney Prediction Form</a></li>
+                        <li class="inner-menu"><a href="./breastform.html">Breast Prediction Form</a></li>
+                        <li class="inner-menu"><a href="./heartform.html">Heart Prediction Form</a></li>
+                        <li class="inner-menu"><a href="./lungform.html">Lung Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bmi-body">
+        <div id="container">
+            <div id="calculator">
+                <h2>CALCULATE</h2>
+                <input type="text" name="bmi" id="weight" placeholder="Weight In KG">
+                <input type="text" name="bmi" id="height" placeholder="Height In CM">
+                <input type="submit" value="Calculate" id="calculate">
+                <div id="yourBMI">Your BMI Is : <span>00</span></div>
+            </div>
+            <div id="guide">
+                <h2>GUIDE</h2>
+                <ul>
+                    <li>Under Weight = Less Then 18.5 BMI</li>
+                    <li>Normal Weight = 18.5 To 24.9 BMI</li>
+                    <li>Over Weight = 25 To 29.9 BMI</li>
+                    <li>Obesity = 30 Or Greater BMI</li>
+                </ul>
+            </div>
+        </div>
+
+    <script>
+    const height = document.querySelector("#height");
+    const weight = document.querySelector("#weight");
+    const calculate = document.querySelector("#calculate");
+    const yourBMI = document.querySelector("#yourBMI");
+
+    calculate.addEventListener("click" , ()=>{
+    //BMI = Body Mass Index
+    //m = Mass Means Weight (KG)
+    //h = Height (CM)
+    //Formula = B = m/h²
+       
+    if(height.value != "" && weight.value != ""){
+        let bmiValue = weight.value / (height.value * height.value) * 10000;
+        yourBMI.innerHTML = `Your BMI Is : <span> ${bmiValue.toFixed(2)} </span>`
+    }
+    else
+        {
+            yourBMI.innerHTML = `Please Enter Correct Value`;
+        }
+    });
+
+    let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+    </div>
+</body>
+</html>
